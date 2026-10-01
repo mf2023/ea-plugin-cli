@@ -78,18 +78,18 @@ def _host_python() -> str:
     """Interpreter the CLI drives `python -m build / venv / twine` with.
 
     A PyInstaller-frozen exe is not a Python interpreter, so the compiled
-    ``encre-plugin`` resolves a real system Python (>= 3.14) from PATH
+    ``encre-plugin`` resolves a real system Python (>= 3.11) from PATH
     instead.  An unfrozen run keeps ``sys.executable``, so dev environments
     (editable installs, project venvs) behave exactly as before.
     """
     if not getattr(sys, "frozen", False):
         return sys.executable
-    probe = "import sys; sys.exit(0 if sys.version_info >= (3, 14) else 1)"
+    probe = "import sys; sys.exit(0 if sys.version_info >= (3, 11) else 1)"
     for name in ("python", "python3", "py"):
         cand = shutil.which(name)
         if cand and subprocess.run([cand, "-c", probe], capture_output=True).returncode == 0:
             return cand
-    _fail("no Python 3.14+ interpreter found on PATH — the downloaded encre-plugin shells out to a real Python for build/verify/publish")
+    _fail("no Python 3.11+ interpreter found on PATH — the downloaded encre-plugin shells out to a real Python for build/verify/publish")
     return ""  # unreachable; _fail raises
 
 

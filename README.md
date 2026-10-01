@@ -13,7 +13,7 @@
     <img alt="PyPI" src="https://img.shields.io/badge/PyPI-ea--plugin--cli-3775A9?style=flat-square&logo=pypi"/>
 </a>
 <a href="https://www.python.org/" target="_blank">
-    <img alt="Python" src="https://img.shields.io/badge/Python-3.14%2B-3776AB?style=flat-square&logo=python&logoColor=white"/>
+    <img alt="Python" src="https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat-square&logo=python&logoColor=white"/>
 </a>
 <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">
     <img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square"/>
@@ -82,6 +82,7 @@ Or as a module: pip install ea-plugin-cli   # development: pip install -e cli/
 <h2 align="center">🌏 Community & License</h2>
 
 - Issues and PRs are welcome!
+- Main repository: https://github.com/mf2023/encre-agent
 - Central registry: https://github.com/mf2023/ea-cwh
 - CLI repository: https://github.com/mf2023/ea-plugin-cli
 

@@ -27,7 +27,7 @@ name = "ea-plugin-cli"
 version = "0.1.0"
 description = "Encre Agent plugin market unified CLI — scaffold, build, verify and publish ea-plugin-* packages"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.11"
 license = {text = "Apache-2.0"}
 authors = [{name = "Dunimd Team", email = "dunimd@outlook.com"}]
 keywords = ["encre", "plugin", "market", "cli", "publish"]
