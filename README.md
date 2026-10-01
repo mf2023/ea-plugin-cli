@@ -6,8 +6,8 @@
 
 [PyPI](https://pypi.org/project/ea-plugin-cli/) | [Changelog](https://github.com/mf2023/ea-cwh/releases)
 
-<a href="https://github.com/mf2023/ea-cli" target="_blank">
-    <img alt="GitHub" src="https://img.shields.io/badge/GitHub-ea--cli-181717?style=flat-square&logo=github"/>
+<a href="https://github.com/mf2023/ea-plugin-cli" target="_blank">
+    <img alt="GitHub" src="https://img.shields.io/badge/GitHub-ea--plugin--cli-181717?style=flat-square&logo=github"/>
 </a>
 <a href="https://pypi.org/project/ea-plugin-cli/" target="_blank">
     <img alt="PyPI" src="https://img.shields.io/badge/PyPI-ea--plugin--cli-3775A9?style=flat-square&logo=pypi"/>
@@ -83,7 +83,7 @@ Or as a module: pip install ea-plugin-cli   # development: pip install -e cli/
 
 - Issues and PRs are welcome!
 - Central registry: https://github.com/mf2023/ea-cwh
-- CLI repository: https://github.com/mf2023/ea-cli
+- CLI repository: https://github.com/mf2023/ea-plugin-cli
 
 <div align="center">
 
