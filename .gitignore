@@ -1,0 +1,233 @@
+# Copyright © 2025-2026 Wenze Wei. All Rights Reserved.
+#
+# This file is part of Encre.
+# The Encre project belongs to the Dunimd Team.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# You may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# DISCLAIMER: Users must comply with applicable AI regulations.
+# Non-compliance may result in service termination or legal liability.
+
+# =============================================================================
+# Rust
+# =============================================================================
+target/
+**/target/
+native/target/
+**/*.rs.bk
+*.pdb
+rust-project.json
+*.rlib
+*.so.*
+*.dylib
+*.dll
+*.dll.manifest
+*.lib
+# Cargo.lock is deliberately NOT ignored: native/ is a binary application
+# crate, so the lockfile must be committed for reproducible Rust builds.
+
+# =============================================================================
+# Python
+# =============================================================================
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.so.*
+*.pyd
+.Python
+.pytest_cache/
+build/
+# build.py is the release build script (source) — deliberately NOT ignored.
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.mypy_cache/
+.ruff_cache/
+*.opt-1/
+*.opt-2/
+*.profraw
+coverage.xml
+.pyre/
+# Python tool caches / artifacts — none present today, but produced by
+# pytest-cov, coverage.py, tox, nox, hypothesis, PDM and Jupyter.
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+.pytype/
+__pypackages__/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# =============================================================================
+# Virtual Environment
+# =============================================================================
+.env
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# =============================================================================
+# Node.js / TypeScript (desktop/)
+# =============================================================================
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+*.tsbuildinfo.*
+.tsbuildinfo
+tsconfig.tsbuildinfo
+.turbo/
+*.next.js
+*.next.css
+desktop/dist/
+desktop/dev/
+desktop/renderer/bundle.js
+desktop/renderer/chunks/
+desktop/renderer/tmp/
+desktop/release
+# Deliberately NOT ignored — tracked source / vendored resources:
+#   desktop/renderer/assets/     (SVG/ICO image resources, incl. platforms/, search-engines/)
+#   desktop/renderer/fonts/      (webfonts)
+#   desktop/renderer/monaco/     (vendored Monaco editor)
+#   desktop/renderer/vendor/     (vendored lucide, etc.)
+#   desktop/renderer/codicon.*   (vendored icon font)
+#   desktop/renderer/xterm.css   (vendored terminal styles)
+#   desktop/renderer/devicon.css
+#   desktop/renderer/_components.css
+#   desktop/renderer/design-system.css  (single source of truth for design tokens)
+# Ignoring these silently drops any NEW image/font/CSS file from `git add .`.
+# Electron main-process build output (compiled from main.ts)
+desktop/main.js
+
+# TypeScript / esbuild artifacts
+*.d.ts.map
+*.js.map
+*.mjs.map
+*.cjs.map
+.eslintcache
+.esbuild/
+.parcel-cache/
+.nyc_output/
+nyc_output/
+
+# =============================================================================
+# IDE / Editor
+# =============================================================================
+.idea/
+.vscode/
+/CLAUDE.md
+.claude/
+.trae/
+.qoder/
+*.swp
+*.swo
+*~
+.encre/
+.workbuddy/
+
+# =============================================================================
+# OS Files
+# =============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# =============================================================================
+# Temporary & Backup
+# =============================================================================
+*.bak
+*.backup
+*.orig
+*.rej
+*.tmp
+.tmp/
+*.temp
+.cache/
+*.log
+
+# =============================================================================
+# Database
+# =============================================================================
+*.db
+*.sqlite
+*.sqlite3
+
+# =============================================================================
+# Process & PID
+# =============================================================================
+*.pid
+*.seed
+*.pid.lock
+
+# =============================================================================
+# Coverage & Docs
+# =============================================================================
+tarpaulin-report.html
+cobertura.xml
+lcov.info
+*.profraw
+docs/_build/
+docs/target/
+# VitePress (docs/help) build cache — its output lives in .vitepress/dist
+**/.vitepress/cache/
+# ad-hoc screenshots captured while previewing the help site
+docs/help/screenshot-nav.png
+
+# =============================================================================
+# Release
+# =============================================================================
+/release/
+# Electron Builder installers & update artifacts (produced by build.py)
+/EA Setup*.exe
+/Encre Setup*.exe
+*.blockmap
+
+# =============================================================================
+# Runtime data (must NEVER live in the project root)
+# =============================================================================
+# The single data root is ~/.dunimd/encre (see harness/encre/paths.py).
+# A project-local ./data tree only shows up when the server is run with
+# ENCRE_DATA_DIR pointing here — stale dev state, not source.
+/data/
+
+# =============================================================================
+# Local AI assistant rule files — ROOT ONLY, never **/AGENTS.md
+# =============================================================================
+# Root-scoped on purpose: a bare "AGENTS.md" also matches, case-insensitively
+# on Windows, the tracked docs pages docs/help/agents.md + docs/help/en/agents.md
+# and every skill's own AGENTS.md (harness/encre/skills/builtin/*/AGENTS.md).
+# Those are committed content and must stay visible to `git add`.
+/AGENTS.md
